@@ -86,13 +86,13 @@ class Api():
         except:
             raise ERROR_NOT_FOUND
 
-    def get_player_matches(self, id: int) -> dict:
+    def get_player_matches(self, id: int, **kwargs) -> dict:
         try:
             return self.executor.request(
                 method="GET",
                 url=PLAYER_URL+f"/{id}/matches",
                 headers=self.headers,
-                params={"languageId": self.lang}
+                params={"languageId": self.lang, **kwargs}
             ).json()
         except:
             raise ERROR_NOT_FOUND
