@@ -1,7 +1,8 @@
 # Stratz
 ### Installation
+Install locally from folderpath
 ```bash
-pip install stratz
+pip install -e Stratz/
 ```
 
 ### Example
